@@ -9,16 +9,16 @@ import (
 type Victorian struct {
 }
 
-func NewVictorian() *Victorian {
+func NewVictorian() FurnitureFactory {
 	return &Victorian{}
 }
 
-func (v *Victorian) createChair() chair.Chair {
+func (v *Victorian) CreateChair() chair.Chair {
 	return &chair.Victorian{}
 }
-func (v *Victorian) createCoffeeTable() coffeetable.CoffeeTable {
+func (v *Victorian) CreateCoffeeTable() coffeetable.CoffeeTable {
 	return &coffeetable.Victorian{}
 }
-func (v *Victorian) createSofa() sofa.Sofa {
+func (v *Victorian) CreateSofa() sofa.Sofa {
 	return &sofa.Victorian{}
 }

@@ -1,6 +1,6 @@
 package chair
 
 type Chair interface {
-	hasLegs()
-	sitOn()
+	HasLegs()
+	SitOn()
 }

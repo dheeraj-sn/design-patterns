@@ -5,10 +5,10 @@ import "fmt"
 type Victorian struct {
 }
 
-func (v *Victorian) hasLegs() {
+func (v *Victorian) HasLegs() {
 	fmt.Println("victorian chair hasLegs")
 }
 
-func (v *Victorian) sitOn() {
+func (v *Victorian) SitOn() {
 	fmt.Println("victorian chair sitOn")
 }

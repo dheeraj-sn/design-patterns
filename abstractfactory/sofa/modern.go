@@ -5,6 +5,6 @@ import "fmt"
 type Modern struct {
 }
 
-func (v *Modern) hasLegs() {
+func (v *Modern) HasLegs() {
 	fmt.Println("modern sofa hasLegs")
 }

@@ -9,16 +9,16 @@ import (
 type ArtDeco struct {
 }
 
-func NewArtDeco() *ArtDeco {
+func NewArtDeco() FurnitureFactory {
 	return &ArtDeco{}
 }
 
-func (v *ArtDeco) createChair() chair.Chair {
+func (v *ArtDeco) CreateChair() chair.Chair {
 	return &chair.ArtDeco{}
 }
-func (v *ArtDeco) createCoffeeTable() coffeetable.CoffeeTable {
+func (v *ArtDeco) CreateCoffeeTable() coffeetable.CoffeeTable {
 	return &coffeetable.ArtDeco{}
 }
-func (v *ArtDeco) createSofa() sofa.Sofa {
+func (v *ArtDeco) CreateSofa() sofa.Sofa {
 	return &sofa.ArtDeco{}
 }

@@ -7,7 +7,7 @@ import (
 )
 
 type FurnitureFactory interface {
-	createChair() chair.Chair
-	createCoffeeTable() coffeetable.CoffeeTable
-	createSofa() sofa.Sofa
+	CreateChair() chair.Chair
+	CreateCoffeeTable() coffeetable.CoffeeTable
+	CreateSofa() sofa.Sofa
 }

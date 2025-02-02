@@ -5,6 +5,6 @@ import "fmt"
 type ArtDeco struct {
 }
 
-func (v *ArtDeco) hasLegs() {
+func (v *ArtDeco) HasLegs() {
 	fmt.Println("artDeco sofa hasLegs")
 }

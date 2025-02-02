@@ -9,16 +9,16 @@ import (
 type Modern struct {
 }
 
-func NewModern() *Modern {
+func NewModern() FurnitureFactory {
 	return &Modern{}
 }
 
-func (v *Modern) createChair() chair.Chair {
+func (v *Modern) CreateChair() chair.Chair {
 	return &chair.Modern{}
 }
-func (v *Modern) createCoffeeTable() coffeetable.CoffeeTable {
+func (v *Modern) CreateCoffeeTable() coffeetable.CoffeeTable {
 	return &coffeetable.Modern{}
 }
-func (v *Modern) createSofa() sofa.Sofa {
+func (v *Modern) CreateSofa() sofa.Sofa {
 	return &sofa.Modern{}
 }

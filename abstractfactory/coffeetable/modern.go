@@ -5,10 +5,10 @@ import "fmt"
 type Modern struct {
 }
 
-func (v *Modern) hasLegs() {
+func (v *Modern) HasLegs() {
 	fmt.Println("modern coffee table hasLegs")
 }
 
-func (v *Modern) placeOn() {
+func (v *Modern) PlaceOn() {
 	fmt.Println("modern coffee table placeOn")
 }
