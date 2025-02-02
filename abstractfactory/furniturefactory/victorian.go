@@ -9,6 +9,10 @@ import (
 type ArtDeco struct {
 }
 
+func NewArtDeco() *ArtDeco {
+	return &ArtDeco{}
+}
+
 func (v *ArtDeco) createChair() chair.Chair {
 	return &chair.ArtDeco{}
 }

@@ -9,6 +9,10 @@ import (
 type Victorian struct {
 }
 
+func NewVictorian() *Victorian {
+	return &Victorian{}
+}
+
 func (v *Victorian) createChair() chair.Chair {
 	return &chair.Victorian{}
 }

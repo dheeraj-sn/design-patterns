@@ -9,6 +9,10 @@ import (
 type Modern struct {
 }
 
+func NewModern() *Modern {
+	return &Modern{}
+}
+
 func (v *Modern) createChair() chair.Chair {
 	return &chair.Modern{}
 }
