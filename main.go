@@ -1,4 +1,4 @@
-package design_patterns
+package main
 
 import (
 	"github.com/dheeraj-sn/design-patterns/abstractfactory/furniturefactory"
