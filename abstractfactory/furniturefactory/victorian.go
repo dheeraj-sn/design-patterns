@@ -6,15 +6,15 @@ import (
 	"github.com/dheeraj-sn/design-patterns/abstractfactory/sofa"
 )
 
-type Victorian struct {
+type ArtDeco struct {
 }
 
-func (v *Victorian) createChair() chair.Chair {
-	return &chair.Victorian{}
+func (v *ArtDeco) createChair() chair.Chair {
+	return &chair.ArtDeco{}
 }
-func (v *Victorian) createCoffeeTable() coffeetable.CoffeeTable {
-	return &coffeetable.Victorian{}
+func (v *ArtDeco) createCoffeeTable() coffeetable.CoffeeTable {
+	return &coffeetable.ArtDeco{}
 }
-func (v *Victorian) createSofa() sofa.Sofa {
-	return &sofa.Victorian{}
+func (v *ArtDeco) createSofa() sofa.Sofa {
+	return &sofa.ArtDeco{}
 }
