@@ -4,12 +4,47 @@ import (
 	"fmt"
 	"github.com/dheeraj-sn/design-patterns/abstractfactory/furniturefactory"
 	"github.com/dheeraj-sn/design-patterns/builder/housebuilder"
+	"github.com/dheeraj-sn/design-patterns/prototype"
 )
 
 func main() {
 	// abstractFactory()
-	buildHouseTest()
+	// buildHouseTest()
+	checkPrototype()
 
+}
+
+func checkPrototype() {
+	file1 := prototype.File{
+		Name: "file1",
+	}
+	file2 := prototype.File{
+		Name: "file2",
+	}
+	file3 := prototype.File{
+		Name: "file3",
+	}
+
+	folder1 := prototype.Folder{
+		Name: "folder1",
+		Children: []prototype.Inode{
+			&file1,
+		},
+	}
+
+	folder2 := prototype.Folder{
+		Name: "folder2",
+		Children: []prototype.Inode{
+			&file2,
+			&file3,
+			&folder1,
+		},
+	}
+
+	folder2.Show("    ")
+
+	cloneFolder := folder2.Clone()
+	cloneFolder.Show("    ")
 }
 
 func buildHouseTest() {
