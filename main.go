@@ -3,10 +3,25 @@ package main
 import (
 	"fmt"
 	"github.com/dheeraj-sn/design-patterns/abstractfactory/furniturefactory"
+	"github.com/dheeraj-sn/design-patterns/builder/housebuilder"
 )
 
 func main() {
-	abstractFactory()
+	// abstractFactory()
+	buildHouseTest()
+
+}
+
+func buildHouseTest() {
+	normalBuilder := housebuilder.NewNormalBuilder()
+	iglooBuilder := housebuilder.NewIglooBuilder()
+	director := housebuilder.NewDirector(normalBuilder)
+	normalHouse := director.BuildHouse()
+	fmt.Println(normalHouse)
+
+	director.SetBuilder(iglooBuilder)
+	iglooHouse := director.BuildHouse()
+	fmt.Println(iglooHouse)
 
 }
 
