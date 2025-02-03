@@ -5,13 +5,26 @@ import (
 	"github.com/dheeraj-sn/design-patterns/abstractfactory/furniturefactory"
 	"github.com/dheeraj-sn/design-patterns/builder/housebuilder"
 	"github.com/dheeraj-sn/design-patterns/prototype"
+	"github.com/dheeraj-sn/design-patterns/singleton"
+	"sync"
 )
 
 func main() {
 	// abstractFactory()
 	// buildHouseTest()
-	checkPrototype()
+	// checkPrototype()
+	checkSingleton()
 
+}
+
+func checkSingleton() {
+	var wc sync.WaitGroup
+	wc.Add(20)
+	for i := 0; i < 20; i++ {
+		go singleton.GetSingleObject(&wc, i)
+	}
+	wc.Wait()
+	//fmt.Scanln()
 }
 
 func checkPrototype() {
