@@ -6,6 +6,7 @@ import (
 	"github.com/dheeraj-sn/design-patterns/builder/housebuilder"
 	"github.com/dheeraj-sn/design-patterns/chainofresponsibility/hospital/department"
 	"github.com/dheeraj-sn/design-patterns/chainofresponsibility/hospital/patient"
+	"github.com/dheeraj-sn/design-patterns/command"
 	"github.com/dheeraj-sn/design-patterns/prototype"
 	"github.com/dheeraj-sn/design-patterns/singleton"
 	"sync"
@@ -16,8 +17,12 @@ func main() {
 	// buildHouseTest()
 	// checkPrototype()
 	//checkSingleton()
-	patientGoesToHospital()
+	//patientGoesToHospital()
+	useCommand()
+}
 
+func useCommand() {
+	tvButton := command.Button{}
 }
 
 func patientGoesToHospital() {
