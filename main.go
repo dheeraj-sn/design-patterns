@@ -22,7 +22,23 @@ func main() {
 }
 
 func useCommand() {
-	tvButton := command.Button{}
+	tv := command.TV{}
+	onCommand := command.OnCommand{
+		D: &tv,
+	}
+
+	offCommand := command.OffCommand{
+		D: &tv,
+	}
+
+	onButton := command.Button{
+		C: &onCommand,
+	}
+	offButton := command.Button{
+		C: &offCommand,
+	}
+	onButton.Press()
+	offButton.Press()
 }
 
 func patientGoesToHospital() {
