@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"github.com/dheeraj-sn/design-patterns/abstractfactory/furniturefactory"
 	"github.com/dheeraj-sn/design-patterns/builder/housebuilder"
+	"github.com/dheeraj-sn/design-patterns/chainofresponsibility/hospital/department"
+	"github.com/dheeraj-sn/design-patterns/chainofresponsibility/hospital/patient"
 	"github.com/dheeraj-sn/design-patterns/prototype"
 	"github.com/dheeraj-sn/design-patterns/singleton"
 	"sync"
@@ -13,8 +15,23 @@ func main() {
 	// abstractFactory()
 	// buildHouseTest()
 	// checkPrototype()
-	checkSingleton()
+	//checkSingleton()
+	patientGoesToHospital()
 
+}
+
+func patientGoesToHospital() {
+	p := patient.Patient{Name: "John"}
+	reception := &department.Reception{}
+	medical := &department.Medical{}
+	doctor := &department.Doctor{}
+	cashier := &department.Cashier{}
+	reception.SetNext(doctor)
+	doctor.SetNext(medical)
+	medical.SetNext(cashier)
+	fmt.Println(p)
+	reception.Execute(&p)
+	fmt.Println(p)
 }
 
 func checkSingleton() {
